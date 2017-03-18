@@ -1,0 +1,13 @@
+<h1>Student Form</h1>
+
+<%= form_for :student, url: students_path do |f| %>
+  <div>
+    <label>Title</label>
+    <%= f.text_field :first_name %>
+  </div>
+  <div>
+    <label>Room Number</label>
+    <%= f.text_field :last_name %>
+  </div>
+  <button>Create Student</button>
+<% end %>
