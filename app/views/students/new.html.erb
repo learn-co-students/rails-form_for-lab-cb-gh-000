@@ -1,0 +1,8 @@
+<%= form_for(@student, url: {action: "create"}) do |t| %>
+  Student Form
+  <%= t.label :first_name %>
+  <%= t.text_field :first_name %>
+  <%= t.label :last_name %>
+  <%= t.text_field :last_name %>
+  <%= t.submit %>
+<% end %>

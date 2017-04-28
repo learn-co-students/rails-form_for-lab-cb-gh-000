@@ -1,0 +1,5 @@
+<%= form_for(@school_class, url:{action:"update"}) do |t| %>
+  <%= t.text_field(:title) %>
+  <%= t.number_field(:room_number) %>
+  <%= t.submit %>
+<% end %>
