@@ -38,3 +38,490 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (2)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "2"]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Sunny"], ["last_name", "Khan"], ["created_at", "2017-08-15 09:42:07.805336"], ["updated_at", "2017-08-15 09:42:07.805336"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Ali"], ["last_name", "Farukh"], ["created_at", "2017-08-15 09:42:07.815165"], ["updated_at", "2017-08-15 09:42:07.815165"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Biology"], ["room_number", 1], ["created_at", "2017-08-15 09:42:07.828266"], ["updated_at", "2017-08-15 09:42:07.828266"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chemistry"], ["room_number", 2], ["created_at", "2017-08-15 09:42:07.835614"], ["updated_at", "2017-08-15 09:42:07.835614"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[36mStudent Load (2.5ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 1]]
+  [1m[36m (19.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 2]]
+  [1m[35m (16.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 3]]
+  [1m[36m (18.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Sunny"], ["last_name", "Khan"], ["created_at", "2017-08-15 09:43:07.915535"], ["updated_at", "2017-08-15 09:43:07.915535"]]
+  [1m[35m (28.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Ali"], ["last_name", "Farukh"], ["created_at", "2017-08-15 09:43:07.951311"], ["updated_at", "2017-08-15 09:43:07.951311"]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Biology"], ["room_number", 1], ["created_at", "2017-08-15 09:43:07.975886"], ["updated_at", "2017-08-15 09:43:07.975886"]]
+  [1m[35m (26.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Chemistry"], ["room_number", 2], ["created_at", "2017-08-15 09:43:08.005535"], ["updated_at", "2017-08-15 09:43:08.005535"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mStudent Load (2.1ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  [1m[36mSchoolClass Load (1.6ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  [1m[35mSchoolClass Load (0.4ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "school_classes" WHERE "school_classes"."id" = ?  [["id", 1]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "school_classes" WHERE "school_classes"."id" = ?  [["id", 2]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mSchoolClass Load (0.3ms)[0m  SELECT "school_classes".* FROM "school_classes"
+
+
+Started GET "/" for 182.186.157.145 at 2017-08-15 09:46:23 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 76ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 182.186.157.145 at 2017-08-15 09:46:33 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.4ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 3764ms (Views: 3758.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 09:51:49 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.3ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 09:54:42 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (90.6ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x007fce5874deb0>:0x007fce5874d280>
+Did you mean?  student_url):
+    1: <ul>
+    2:   <% @school_classes.each do |school_class| %>
+    3:   <li><%= link_to school_class.title, school_class_path(student) %></li>
+    4:   <% end %>
+    5: </ul>
+  app/views/school_classes/index.html.erb:3:in `block in _app_views_school_classes_index_html_erb___3492223713422406606_42040260'
+  app/views/school_classes/index.html.erb:2:in `_app_views_school_classes_index_html_erb___3492223713422406606_42040260'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (56.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.8ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 09:55:00 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#index as HTML
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 571ms (Views: 568.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/new" for 182.186.157.145 at 2017-08-15 10:15:31 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 580ms (Views: 568.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for 182.186.157.145 at 2017-08-15 10:18:10 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (16.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @school_class do |f| %>
+    2:   <%= f.label :title %>
+    3:   <%= f.text_field :title %><br>
+    4:   <%= f.label :room_number %>
+  app/views/school_classes/new.html.erb:1:in `_app_views_school_classes_new_html_erb__1687028987126425118_35473300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.2ms)
+
+
+Started GET "/school_classes/new" for 182.186.157.145 at 2017-08-15 10:18:54 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 601ms (Views: 592.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 10:29:15 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.3ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 516ms (Views: 443.0ms | ActiveRecord: 52.3ms)
+
+
+Started GET "/school_classes/3" for 182.186.157.145 at 2017-08-15 10:29:18 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.9ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered school_classes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 167ms (Views: 138.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:29:23 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/3" for 182.186.157.145 at 2017-08-15 10:29:28 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered school_classes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 205ms (Views: 201.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:29:30 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/new" for 182.186.157.145 at 2017-08-15 10:31:40 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 618ms (Views: 592.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/school_classes" for 182.186.157.145 at 2017-08-15 10:31:50 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SV45HBGt4j2SPdp/TgkzQQTHmHyycdl9FLqb8mZgp89CjmGR4MQvLFxpekUqmWnKXELfL7irTrTg5nvhzi1eRw==", "school_class"=>{"title"=>"English", "room_number"=>"104"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "English"], ["room_number", 104], ["created_at", "2017-08-15 10:31:50.518593"], ["updated_at", "2017-08-15 10:31:50.518593"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Redirected to http://46.101.236.30:30000/school_classes/5
+Completed 302 Found in 86ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/school_classes/5" for 182.186.157.145 at 2017-08-15 10:31:51 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/2" for 182.186.157.145 at 2017-08-15 10:31:55 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=2):
+  app/controllers/school_classes_controller.rb:40:in `set_school_class'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.3ms)
+
+
+Started GET "/school_classes/3" for 182.186.157.145 at 2017-08-15 10:31:57 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered school_classes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 119ms (Views: 113.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 10:32:01 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.3ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/new" for 182.186.157.145 at 2017-08-15 10:32:04 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/" for 182.186.157.145 at 2017-08-15 10:32:08 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#index as HTML
+  [1m[36mSchoolClass Load (0.5ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:34:21 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 133ms (Views: 130.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/4/edit" for 182.186.157.145 at 2017-08-15 10:34:23 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered school_classes/edit.html.erb within layouts/application (39.1ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `room_number' for #<ActionView::Helpers::FormBuilder:0x007f0a76599fe8>):
+    1: <h1>Edit School CLass</h1>
+    2: <%= form_for @school_class do |f| %>
+    3:   <%= f.text_field :title %><br>
+    4:   <%= f.room_number :room_number %><br>
+    5:   <%= f.submit %>
+    6: <% end %>
+  app/views/school_classes/edit.html.erb:4:in `block in _app_views_school_classes_edit_html_erb__876008108792313017_69841456009460'
+  app/views/school_classes/edit.html.erb:2:in `_app_views_school_classes_edit_html_erb__876008108792313017_69841456009460'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.7ms)
+
+
+Started GET "/school_classes/4/edit" for 182.186.157.145 at 2017-08-15 10:34:37 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:38:06 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mSchoolClass Load (0.3ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 521ms (Views: 474.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:38:10 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZmDOpw3ASum2v40vpdlQ28ywwVPtiV87+xUnB5VM7YCSdu3bV7MOmiOXg7aBz/IN7eEVkVssrUbsLSPthjKPg==", "school_class"=>{"title"=>"Mathematics", "room_number"=>"500"}, "commit"=>"Update School class", "id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "school_classes" SET "title" = ?, "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "Mathematics"], ["room_number", 500], ["updated_at", "2017-08-15 10:38:10.557681"], ["id", 4]]
+  [1m[35m (27.8ms)[0m  commit transaction
+Redirected to http://46.101.236.30:30000/school_classes/4
+Completed 302 Found in 38ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/school_classes/4" for 182.186.157.145 at 2017-08-15 10:38:11 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes" for 182.186.157.145 at 2017-08-15 10:38:14 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.3ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/4/edit" for 182.186.157.145 at 2017-08-15 10:38:23 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered school_classes/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 173ms (Views: 162.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 182.186.157.145 at 2017-08-15 10:38:56 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 182.186.157.145 at 2017-08-15 10:42:17 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 486ms (Views: 420.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/5" for 182.186.157.145 at 2017-08-15 10:42:20 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 55ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6" for 182.186.157.145 at 2017-08-15 10:44:03 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/6/edit" for 182.186.157.145 at 2017-08-15 10:44:06 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered students/edit.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 97ms (Views: 95.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/students/6" for 182.186.157.145 at 2017-08-15 10:46:04 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lrQi4dTQVibBfaGD6c0qr86cSyzWx07D2UgvgYHpTI2dZHpsJbmbNw8pAbmNXXAklhkMf9wd2QotFM+SKaS1BQ==", "student"=>{"first_name"=>"Ali", "last_name"=>"Sheikh"}, "commit"=>"Update Student", "id"=>"6"}
+  [1m[35mStudent Load (0.4ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (62.0ms)[0m  UPDATE "students" SET "last_name" = ?, "updated_at" = ? WHERE "students"."id" = ?  [["last_name", "Sheikh"], ["updated_at", "2017-08-15 10:46:05.322543"], ["id", 6]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://46.101.236.30:30000/students/6
+Completed 302 Found in 182ms (ActiveRecord: 76.1ms)
+
+
+Started GET "/students/6" for 182.186.157.145 at 2017-08-15 10:46:05 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered students/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 578ms (Views: 576.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 182.186.157.145 at 2017-08-15 10:49:15 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 517ms (Views: 435.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/students" for 182.186.157.145 at 2017-08-15 10:49:24 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HBsRa1c1WzKsWn8yIHr4PBBANlbybDVK3GePoL/6m5gXy0nmplyWI2IO3whE6qK3SMVxBfi2ooMoO2+zF7diEA==", "student"=>{"first_name"=>"saqib", "last_name"=>"atta"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "saqib"], ["last_name", "atta"], ["created_at", "2017-08-15 10:49:24.473746"], ["updated_at", "2017-08-15 10:49:24.473746"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+Redirected to http://46.101.236.30:30000/students/7
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/students/7" for 182.186.157.145 at 2017-08-15 10:49:24 +0000
+Cannot render console from 182.186.157.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 70.5ms | ActiveRecord: 0.3ms)
