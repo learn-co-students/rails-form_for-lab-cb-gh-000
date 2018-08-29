@@ -1,10 +1,11 @@
 class StudentsController < ApplicationController
   def new
-    @school_class = SchoolClass.new
+    @student = Student.new
   end
 
   def create
-
+    @student = Student.create(params.require(:student))
+    redirect_to student_path(@student)
   end
 
   def show
@@ -16,6 +17,9 @@ class StudentsController < ApplicationController
   end
 
   def update
+    @student = Student.find(params[:id])
+    @student.update(params.require(:student))
+    redirect_to student_path(@student)
   end
 
   def valid_params(*args)
