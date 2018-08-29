@@ -1,23 +1,10 @@
 Rails.application.routes.draw do
-  get 'students/new'
 
-  get 'students/create'
+  resources :students, only: [:index, :new, :create, :edit, :update, :show]
+  # get '/student/:id', to: 'students#show', as: 'student_show'
 
-  get 'students/show'
-
-  get 'students/edit'
-
-  get 'students/update'
-
-  get 'school_classes/new'
-
-  get 'school_classes/create'
-
-  get 'school_classes/show'
-
-  get 'school_classes/edit'
-
-  get 'school_classes/update'
+  resources :school_classes, only: [:index, :new, :create, :edit, :update, :show]
+  # get '/school_classes/:id', to: 'school_classes#show', as: 'school_class_show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
